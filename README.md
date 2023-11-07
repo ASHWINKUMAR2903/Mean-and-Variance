@@ -1,5 +1,5 @@
+## EXP NO : 1 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; DATE : 25.08.2023
 #  Mean and variance of a discrete  distribution
-
 
 # Aim : 
 
@@ -48,10 +48,38 @@ It shows the distance of a random variable from its mean. It is calcualted as
 ![image](https://user-images.githubusercontent.com/103921593/229993174-5b67e57e-3e01-4ac4-9f83-410a932b22bf.png)
 
 # Program :
-
-
+```
+NAME :ASHWIN KUMAR
+reg.no :212222100006
+```
+```
+import numpy as np
+L=[int(i) for i in input().split()]
+N=len(L); M=max(L) 
+x=list();f=list()
+for i in range (M+1):
+    c = 0
+    for j in range(N):
+        if L[j]==i:
+            c=c+1
+    f.append(c)
+    x.append(i)
+sf=np.sum(f)
+p=list()
+for i in range(M+1):
+    p.append(f[i]/sf) 
+mean=np.inner(x,p)
+EX2=np.inner(np.square(x),p)
+var=EX2-mean**2 
+SD=np.sqrt(var)
+print("The Mean arrival rate is %.3f "%mean)
+print("The Variance of arrival from feeder is %.3f "%var) 
+print("The Standard deviation of arrival from feeder is %.3F "%SD)
+```
 
 # Output : 
+![image](https://github.com/ASHWINKUMAR2903/Mean-and-Variance/assets/119407186/98bd944e-afcd-47c0-a262-f80ed57cd3da)
+![image](https://github.com/ASHWINKUMAR2903/Mean-and-Variance/assets/119407186/7f71da20-d8ad-4540-b1d7-ed3a2b6f057f)
 
 # Results :
 The mean and variance of arrivals of objects from feeder using probability distribution are calculated.
